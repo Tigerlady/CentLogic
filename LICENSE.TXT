@@ -1,0 +1,21 @@
+Application: CentLogic ColdFusion eCommerce for CentLogic
+Copyright 2002 - 2022, All Rights Reserved
+Developer: Centric Web, Inc. | Centricweb.com
+Licensing: http://www.Centricweb.com/eula
+Support: http://www.Centricweb.com/support
+
+This file is part of CentLogic Shopping Cart for Coldfusion. CentLogic is based off of Cartweaver with permission of the orginal owner Lawrence Crammer, it is, therefore, licensed under the Gnu General Public License 
+version 2 only, (GPLv2) subject to the same special exception that appears in the licensing 
+notice set out below. That exception is also granted by the copyright holders of CentLogic 
+also applies to this file and CentLogic in general. 
+
+CentLogic is free software: you can redistribute it and/or modify 
+it under the terms of the GNU General Public License as published by 
+the Free Software Foundation, Version 2 of the License. 
+CentLogic is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+You should have received a copy of the GNU General Public License 
+along with CentLogic. If not, see <http://www.gnu.org/licenses/>. 
+

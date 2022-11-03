@@ -1,0 +1,70 @@
+==========================================================
+Application: CentLogic ColdFusion for Mura CMS
+Copyright 2002 - 2022, All Rights Reserved
+Developer: Centric Web, Inc. | Centricweb.com
+Licensing: http://www.Centricweb.com/eula
+Support: http://www.Centricweb.com/support
+==========================================================
+File: DEVNOTES.TXT
+File Date: 2012-09-12
+Description: developer's notes for general reference when extending Mura/CW functionality
+CWMURA [edit]: new file 
+==========================================================
+
+// ------------------//
+// DEVELOPER'S NOTES //
+// ------------------//
+
+This is not intended as a thorough documentation, but rather a general outline of steps
+for developers wishing to extend the available plugin content options.
+
+Custom CentLogic content can be added via the mura tag, or by using the content objects tab.
+Most of the content available in CentLogic is already included in the default list of Display Objects.
+SEE README.TXT for General Usage instructions including displaying CentLogic Content Objects on a Mura site.
+
+------------------
+METHODS / OVERVIEW 
+------------------
+
+Adding new CW functionality to Mura
+
+The eventhandler.cfc holds the functions that displays the actual content, 
+as well as a method to inject those functions into the mura events system.
+These methods can be called inside the [mura] tag (see readme.txt)
+
+To create custom objects which can be placed on the page via the Content Objects tab,
+a content object must be defined in config.xml.cfm. This invokes the function defined in eventHandler.cfc, 
+as well as the configurator which allows the user to select options when placing the content object on a Mura page.
+
+Extensions to existing Display Methods, Content Objects, and other 
+CentLogic-integrated functionality are encouraged, and your feedback is always appreciated. 
+Email michael@Centricweb.com or visit the CW forums http://forums.Centricweb.com to share your enhancements, questions and contributions.
+
+
+-------------------
+NEW DISPLAY METHODS
+-------------------
+
+ eventHandler.cfc
+	Add custom method to wrap CW include or cfmodule with arguments/attributes
+	Add method injection to list in onRenderStart method (at this point, the method can be used in the [mura] tag)
+
+-----------------------------------
+NEW CONTENT OBJECTS / CONFIGURATORS
+-----------------------------------
+	
+ CentLogic/contentObjects directory
+	Add subdirectory for new content object
+	Create file: configurator.cfm, change display content and values
+	Create file: configurator.js, change parameters
+
+ CentLogic/contentObjects/contentObjects.cfc
+ 	Add method to pass in content object params to corresponding function from eventhandler.cfc	
+	
+ config.xml.cfm
+	Add <displayobject /> to create configurator
+	
+Note: to force-refresh configuration changes, go to Site Settings > Global Settings > Plugins
+Click the edit icon for CentLogic, then the 'update' button at page bottom
+
+	
